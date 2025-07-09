@@ -41,13 +41,23 @@
 </head>
 <body>
 
-  <!-- Replace with actual direct URL of the check mark GIF -->
   <img src="https://media1.tenor.com/m/BSY1qTH8g-oAAAAC/check.gif" alt="تم بنجاح">
 
   <p>يمكنك الدخول الى الطائرة، إذا احتجت أي مساعدة يمكن أن تسأل أحد المضيفين.</p>
   <p>يمكنك الضغط على هذا الزر في الأسفل لطلب الطعام</p>
 
-  <button>طلب الطعام</button>
+  <button onclick="playSound()">طلب الطعام</button>
+
+  <audio id="orderSound">
+    <source src="https://www.soundjay.com/misc/bell-ringing-04.mp3" type="audio/mp3">
+    المتصفح لا يدعم تشغيل الصوت.
+  </audio>
+
+  <script>
+    function playSound() {
+      document.getElementById('orderSound').play();
+    }
+  </script>
 
 </body>
 </html>
